@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Roy's Blog Page</h1>
+    {%for post in posts reversed%}
+    <div>
+       <a href="/posts/{{post.id}}" style="text-decoration: none;color: black; font-size: 1.5rem;"> <h2>{{post.title}}</h2>
+        <h4>{{post.date}}</h4>
+        <h5>{{post.content|truncatewords:20}}</h5></a>
+    </div>
+    {%endfor%}
+    
+</body>
+</html>
